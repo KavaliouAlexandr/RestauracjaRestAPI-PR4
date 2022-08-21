@@ -1,0 +1,16 @@
+{
+  "name": "tempprojekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "myrun": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cowsay": "^1.5.0",
+    "typescript": "^4.6.2"
+  }
+}
