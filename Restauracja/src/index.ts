@@ -1,5 +1,6 @@
 import express from "express";
 import { Request, Response } from "express";
+import bodyParser from "body-parser";
 import stolikiObj from "../obj/stoliki"
 import restauracjeObj from "../obj/restauracje"
 import pracownikObj from "../obj/pracownik"

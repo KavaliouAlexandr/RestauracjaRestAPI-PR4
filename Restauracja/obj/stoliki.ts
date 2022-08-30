@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import bodyParser from "body-parser";
 import { appendFile } from "fs";
 
-const Stolik = require("../models/stolikSchema");
+const Stolik = require("../models/stolikPRJK");
 const router = express.Router();
 
 router.get("/", (req: Request, res: Response) => {
