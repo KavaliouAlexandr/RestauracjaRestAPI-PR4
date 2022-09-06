@@ -36,7 +36,7 @@ mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 
 
 app.get("/", function (req: Request, res: Response) {
-  res.send("Ty jesteś w API!");
+  res.send("Cześć, Jesteś w api restauracji!");
 });
 
 
