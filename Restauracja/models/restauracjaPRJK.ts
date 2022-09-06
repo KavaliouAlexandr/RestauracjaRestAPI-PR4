@@ -1,7 +1,7 @@
 const mongooseRestauracja = require("mongoose");
-const PRJKRestauracja = mongooseRestauracja.PRJK;
+const SchemaRestauracja = mongooseRestauracja.Schema;
 
-let RestauracjaPRJK = new PRJKRestauracja(
+let restauracjaSchema = new SchemaRestauracja(
   {
     nazwa: {
       type: String,
@@ -31,5 +31,5 @@ let RestauracjaPRJK = new PRJKRestauracja(
   { timestamps: true }
 );
 
-const Restauracja = mongooseRestauracja.model("Restauracja", RestauracjaPRJK);
+const Restauracja = mongooseRestauracja.model("Restauracja", restauracjaSchema);
 module.exports = Restauracja;

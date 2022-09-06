@@ -1,11 +1,11 @@
 const mongooseRezerwacja = require("mongoose");
-const PRJKRezerwacja = mongooseRezerwacja.PRJK;
+const SchemaRezerwacja = mongooseRezerwacja.Schema;
 
-let rezerwacjaPRJK = new PRJKRezerwacja(
+let rezerwacjaSchema = new SchemaRezerwacja(
   {
     stolik: [
       {
-        type: PRJKRezerwacja.Types.ObjectId,
+        type: SchemaRezerwacja.Types.ObjectId,
         ref: "Stolik",
         required: true,
       },
@@ -29,5 +29,5 @@ let rezerwacjaPRJK = new PRJKRezerwacja(
   { timestamps: true }
 );
 
-const Rezerwacja = mongooseRezerwacja.model("Rezerwacja", rezerwacjaPRJK);
+const Rezerwacja = mongooseRezerwacja.model("Rezerwacja", rezerwacjaSchema);
 module.exports = Rezerwacja;

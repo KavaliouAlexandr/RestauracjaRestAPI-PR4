@@ -1,18 +1,18 @@
 const mongooseZamowienie = require("mongoose");
-const PRJKZamowienie = mongooseZamowienie.PRJK;
+const SchemaZamowienie = mongooseZamowienie.Schema;
 
-let zamowieniePRJK = new PRJKZamowienie(
+let zamowienieSchema = new SchemaZamowienie(
   {
     pracownik:[
       {
-        type: PRJKZamowienie.Types.ObjectId,
+        type: SchemaZamowienie.Types.ObjectId,
         ref: "Pracownik",
         required: true,
       },
    ],
     pozycje:[
       {
-        type: PRJKZamowienie.Types.Mixed,
+        type: SchemaZamowienie.Types.Mixed,
         ref: "Danie",
         required: true,
       },
@@ -24,7 +24,7 @@ let zamowieniePRJK = new PRJKZamowienie(
     },
     stolik:[ 
       {
-        type: PRJKZamowienie.Types.ObjectId,
+        type: SchemaZamowienie.Types.ObjectId,
         ref: "Stolik",
         required: true,
       },
@@ -38,6 +38,6 @@ let zamowieniePRJK = new PRJKZamowienie(
   { timestamps: true }
 );
 
-const Zamowienie = mongooseZamowienie.model("Zamowienie", zamowieniePRJK);
+const Zamowienie = mongooseZamowienie.model("Zamowienie", zamowienieSchema);
 module.exports = Zamowienie;
 

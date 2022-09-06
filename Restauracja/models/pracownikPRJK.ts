@@ -1,7 +1,7 @@
 const mongoosePracownik = require("mongoose");
-const PRJKPracownik = mongoosePracownik.PRJK;
+const SchemaPracownik = mongoosePracownik.Schema;
 
-let pracownik = new PRJKPracownik(
+let pracownikSchema = new SchemaPracownik(
   {
     imie: {
       type: String,
@@ -19,5 +19,5 @@ let pracownik = new PRJKPracownik(
   { timestamps: true }
 );
 
-const Pracownik = mongoosePracownik.model("Pracownik", pracownik);
+const Pracownik = mongoosePracownik.model("Pracownik", pracownikSchema);
 module.exports = Pracownik;

@@ -1,7 +1,7 @@
 const mongooseStolik = require("mongoose");
-const PRJKStolik = mongooseStolik.PRJK;
+const SchemaStolik = mongooseStolik.Schema
 
-export let stolikPRJK = new PRJKStolik(
+export let stolikSchema = new SchemaStolik(
   {
     nazwa: {
       type: String,
@@ -20,5 +20,5 @@ export let stolikPRJK = new PRJKStolik(
   { timestamps: true }
 );
 
-const Stolik = mongooseStolik.model("Stolik", stolikPRJK);
+const Stolik = mongooseStolik.model("Stolik", stolikSchema);
 module.exports = Stolik;

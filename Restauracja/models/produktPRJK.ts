@@ -1,7 +1,7 @@
 const mongooseProdukt = require("mongoose");
-const PRJKProdukt = mongooseProdukt.PRJK;
+const SchemaProdukt = mongooseProdukt.Schema;
 
-let produkt = new PRJKProdukt(
+let produktSchema = new SchemaProdukt(
   {
     nazwa: {
       type: String,
@@ -23,5 +23,5 @@ let produkt = new PRJKProdukt(
   { timestamps: true }
 );
 
-const Produkt = mongooseProdukt.model("Produkt", produkt);
+const Produkt = mongooseProdukt.model("Produkt", produktSchema);
 module.exports = Produkt;

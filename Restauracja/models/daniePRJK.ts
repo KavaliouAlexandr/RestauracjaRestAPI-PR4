@@ -1,7 +1,7 @@
 const mongooseDanie = require("mongoose");
-const PRJKDanie = mongooseDanie.PRJK;
+const SchemaDanie = mongooseDanie.Schema;
 
-let danie = new PRJKDanie(
+let danieSchema = new SchemaDanie(
   {
     nazwa: {
       type: String,
@@ -19,5 +19,5 @@ let danie = new PRJKDanie(
   { timestamps: true }
 );
 
-const Danie = mongooseDanie.model("Danie", danie);
+const Danie = mongooseDanie.model("Danie", danieSchema);
 module.exports = Danie;

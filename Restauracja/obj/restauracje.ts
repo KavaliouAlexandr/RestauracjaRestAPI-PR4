@@ -22,7 +22,7 @@ router.get("/getSingle/:id", (req: Request, res: Response) => {
       res.send(result);
     })
     .catch((err: any) => {
-      res.send("Nie mamy takiej restauracji");
+      res.send("Nie mamy restauracji o takim id w bazie");
     });
 });
 
@@ -43,7 +43,7 @@ router.post("/addNew", (req: Request, res: Response) => {
     })
     .catch((error: any) => {
       res.send(
-        "Błędne dane Restauracji"
+        "Błędne dane Restauracji, proszę  sprawdzić format wprowadzonych danych"
       );
     });
 });

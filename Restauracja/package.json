@@ -13,7 +13,6 @@
   "dependencies": {
     "@types/body-parser": "^1.19.2",
     "@types/express": "^4.17.13",
-    "@types/node": "^17.0.31",
     "express": "^4.18.1",
     "mobgoose": "^3.0.1",
     "mongo": "^0.1.0",
@@ -23,6 +22,6 @@
     "typescript": "^4.6.4"
   },
   "devDependencies": {
-    "@types/node": "^17.0.31"
+    "@types/node": "^17.0.45"
   }
 }
